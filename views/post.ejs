@@ -1,0 +1,15 @@
+<!-- post.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Post</title>
+</head>
+<body>
+  <h1><%= post.title %></h1>
+  <img src="<%= post.image %>">
+  <p><%= post.content %></p>
+  <!-- edit -->
+    <a href="/posts/<%= post._id %>/edit">Edit</a>
+</body>
+</html>

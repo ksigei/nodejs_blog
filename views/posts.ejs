@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Posts</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+
+    <% if (posts.length === 0) { %>
+        <p>No posts available.</p>
+    <% } else { %>
+        <ul>
+            <% posts.forEach(function(post) { %>
+                <li>
+                    <h3><%= post.title %></h3>
+                    <p><%= post.content %></p>
+                    <p><%= post.author %></p>
+                    <p><%= post.category %></p>
+                    <p><%= post.tags %></p>
+                    <p><%= post.image %></p>
+                    <p><a href="/posts/<%= post._id %>">View</a></p>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+
+    <a href="/posts/new">Create New Post</a>
+</body>
+</html>
